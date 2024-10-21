@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Welcome to GalleryUpload</h1>
+    <p class="lead">This is a platform to upload and view media in a gallery format.</p>
+    <p>Get started by exploring the <a asp-controller="Gallery" asp-action="Index">Gallery</a> or <a asp-controller="Upload" asp-action="Index">Upload your files</a>.</p>
+
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg me-2" asp-controller="Gallery" asp-action="Index">Go to Gallery</a>
+        <a class="btn btn-secondary btn-lg" asp-controller="Upload" asp-action="Index">Upload a File</a>
+    </div>
+</div>

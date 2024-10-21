@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Upload File";
+    Layout = "_Layout";
+    
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Upload a File</h2>
+    <p class="text-center lead">Choose a file to upload to the gallery.</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form asp-action="Upload" enctype="multipart/form-data" method="post" class="upload-form p-4 shadow bg-light rounded">
+                
+                <div class="form-group mb-4">
+                    <label for="fileInput" class="form-label">Select File:</label>
+                    <input type="file" class="form-control" id="fileInput" name="file" required>
+                </div>
+
+                
+                <div class="form-group mb-4">
+                    <label for="descriptionInput" class="form-label">Description (Optional):</label>
+                    <textarea class="form-control" id="descriptionInput" name="description" rows="3" placeholder="Describe the file..."></textarea>
+                </div>
+
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg shadow">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

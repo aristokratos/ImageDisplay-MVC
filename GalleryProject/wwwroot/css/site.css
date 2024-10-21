@@ -1,0 +1,165 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Container padding */
+.container {
+    padding: 30px;
+}
+
+/* Card customization */
+.card {
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+/* Text alignments */
+.card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Responsive grid for images */
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-lg-4,
+.col-md-6 {
+    padding: 10px;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+/* Add subtle shadow */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Form container */
+.upload-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacing and alignment */
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Button */
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Overall styling for centered container */
+.container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Feature Boxes */
+.feature-box {
+    transition: transform 0.3s ease-in-out;
+}
+
+    .feature-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-box h4 {
+        margin-bottom: 15px;
+    }
+
+    .feature-box i {
+        margin-bottom: 10px;
+    }
+
+/* Call-to-Action Section */
+.cta-section {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+}
+
+    .cta-section h3 {
+        font-size: 2rem;
+    }
+
+    .cta-section .btn {
+        font-size: 1.25rem;
+    }

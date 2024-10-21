@@ -1,0 +1,59 @@
+﻿@model IEnumerable<GalleryProject.Models.GalleryItem>
+@{
+    ViewData["Title"] = "Gallery";
+    Layout = "_Layout";
+    
+}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Image Gallery</h2>
+
+    
+    <div class="row gallery-row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm h-100">
+                    
+                    <img src="@(!string.IsNullOrEmpty(item.FilePath) ? Url.Content(item.FilePath) : "/images/photo1.jpg")" 
+                         alt="@item.FileName" 
+                         class="img-fluid card-img-top rounded" />
+                    
+                    <div class="card-body">
+                        <h5 class="card-title text-center">@item.FileName</h5>
+                        <p class="text-muted text-center">Uploaded on: @item.UploadDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            No images available in the gallery. Be the first to upload!
+        </div>
+    }
+    else
+    {
+        
+        <div class="row gallery-row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="@(!string.IsNullOrEmpty(item.FilePath) ? Url.Content(item.FilePath) : "/images/photo1.jpg")"
+                             alt="@item.FileName"
+                             class="img-fluid card-img-top rounded" />
+
+                        <div class="card-body">
+                            <h5 class="card-title text-center">@item.FileName</h5>
+                            <p class="text-muted text-center">Uploaded on: @item.UploadDate.ToShortDateString()</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+</div>
